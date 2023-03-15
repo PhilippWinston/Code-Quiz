@@ -15,14 +15,27 @@
 
   <body>
     <header class="header">
-      <hi>Let's play a Game!</hi>
+      <h1>Let's play a Game!</h1>
       <h2>
         If you're coding fancy or fancy coding, I'm sure you'll have a Blast!
       </h2>
-      <nav>
-        <a href="#High-Scores!">High Scores!</a>
 
+      <!-- Trigger/Open The Modal -->
+      <button id="highscoreButton">High Scores!</button>
+
+      <!-- The Modal -->
+      <div id="highscoreModal" class="highcoreModal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Current High Scores</h2>
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
+      <nav>
         <a href="#It's-Game-Time!">It's Game Time!</a>
+
+        <a href="#Contact-Me">Contact Me</a>
       </nav>
     </header>
     <!-- add CSS background -->
@@ -33,8 +46,6 @@
         <h2>Try your coding knowledge! Play a round or two</h2>
       </section>
     </main>
-
-    
 
     <footer id="Contact-Me" class="footer">
       <h2>Contact Me and Info</h2>
