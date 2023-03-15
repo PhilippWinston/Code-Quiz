@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Code Quiz!</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>Let's play a Game!</h1>
+      <h2>
+        If you're coding fancy or fancy coding, I'm sure you'll have a Blast!
+      </h2>
+
+      <!-- Trigger/Open The Modal -->
+      <button id="highscoreButton">High Scores!</button>
+
+      <!-- The Modal -->
+      <div id="highscoreModal" class="highcoreModal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Current High Scores</h2>
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#It's-Game-Time!">It's Game Time!</a>
+
+        <a href="#Contact-Me">Contact Me</a>
+      </nav>
+    </header>
+    <!-- add CSS background -->
+    <div class="Background"></div>
+
+    <main>
+      <section id="It's-Game-Time" class="It's-Game-Time">
+        <h2>Try your coding knowledge! Play a round or two</h2>
+      </section>
+    </main>
+
+    <footer id="Contact-Me" class="footer">
+      <h2>Contact Me and Info</h2>
+      <nav>
+        <a href="mailto:Philippwinston@gmail.com">Email Me</a>
+
+        <a href="https://github.com/PhilippWinston">Github</a>
+      </nav>
+      <h3>Made with pride by PSW</h3>
+    </footer>
+  </body>
 </html>
