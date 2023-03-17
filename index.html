@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style.css" />
-    <title>Code Quiz!</title>
+    <script src="./assets/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>    <title>Code Quiz!</title>
     <style>
       html {
         scroll-behavior: smooth;
@@ -15,40 +16,41 @@
 
   <body>
     <header class="header">
-      <h1>Let's play a Game!</h1>
-      <h2>
-        If you're coding fancy or fancy coding, I'm sure you'll have a Blast!
-      </h2>
+      <h1>
+        If you're coding fancy or fancy coding,
+        I'm sure you'll have a Blast!
+      </h1>
 
-      <!-- Trigger/Open The Modal -->
-      <button id="highscoreButton">High Scores!</button>
-
-      <!-- The Modal -->
-      <div id="highscoreModal" class="highcoreModal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2>Current High Scores</h2>
-          <p>Some text in the Modal..</p>
-        </div>
-      </div>
       <nav>
-        <a href="#It's-Game-Time!">It's Game Time!</a>
+        <a href="#Its-Game-Time">It's Game Time!</a>
+
+        <button id="highscoreButton">High Scores!</button>
+
+        <div id="highscoreModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Current High Scores</h2>
+            <p></p>
+          </div>
+        </div>
 
         <a href="#Contact-Me">Contact Me</a>
       </nav>
     </header>
-    <!-- add CSS background -->
-    <div class="Background"></div>
 
     <main>
-      <section id="It's-Game-Time" class="It's-Game-Time">
-        <h2>Try your coding knowledge! Play a round or two</h2>
-      </section>
-    </main>
+      <div id="Its-Game-Time" class="Its-Game-Time">
+        <h2>Try your coding knowledge!</h2>
+        <div class="timer">Time: <span id="time">0</span>
+        
+        </div>
+        <button id="start">Start Quiz</button>
+      </div>
+      <div id="q" class="q"></div>
+      <div id="a" class="a"></div>
+     </main>
 
     <footer id="Contact-Me" class="footer">
-      <h2>Contact Me and Info</h2>
       <nav>
         <a href="mailto:Philippwinston@gmail.com">Email Me</a>
 
