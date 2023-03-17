@@ -1,0 +1,183 @@
+body {
+  padding: 15px;
+  margin: auto;
+  background-color: black;
+  color: green;
+
+  justify-content: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 10px;
+  font-family: andale mono, monospace;
+  background-color: black;
+  color: green;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+h1 {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+#highscoreButton {
+  background-color: black;
+  color: green;
+  font-family: andale mono, monospace;
+}
+
+#highscoreButton:hover,
+#highscoreButton::after {
+  color: red;
+  cursor: pointer;
+}
+
+nav > a {
+  text-decoration: underline;
+  color: green;
+  margin: 20px;
+}
+
+nav > a:visited {
+  color: green;
+}
+
+header h1 {
+  display: inline-block;
+  font-size: x-large;
+}
+
+header nav {
+  padding-top: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  float: right;
+  font-family: andale mono, monospace;
+  font-size: 15px;
+}
+
+header nav ul {
+  list-style-type: none;
+  font-style: italic;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 10%;
+  min-height: 100vh;
+  justify-content: center;
+  text-align: center;
+  border: 5px solid green;
+  padding: auto;
+}
+
+#start {
+  background-color: black;
+  color: green;
+  cursor: pointer;
+  font-family: andale mono, monospace;
+  
+}
+
+#start > button:visited {
+  color: green;
+}
+
+#start:hover,
+#start:focus {
+  color: red;
+  cursor: pointer;
+}
+
+#timer {
+  font-family: andale mono, monospace;
+}
+
+.Its-Game-Time {
+  margin-bottom: auto;
+  font-size: 1rem;
+  font-family: andale mono, monospace;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0, 0, 0); 
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+  background-color: black;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+
+.close {
+  color: green;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(250, 1, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  padding: 15px;
+  font-family: andale mono, monospace;
+  background-color: black;
+  color: green;
+  margin-bottom: 0px;
+  margin-top: auto;
+}
+
+footer h3 {
+  text-align: center;
+}
+
+footer nav {
+  text-align: center;
+}
+
+@media only screen and (max-width: 800px) and (min-width: 200px) {
+  header h1 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  header {
+    height: 80px;
+  }
+
+  header > nav {
+    width: 100%;
+  }
+  nav > a {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
