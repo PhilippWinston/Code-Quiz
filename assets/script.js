@@ -81,11 +81,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const scoreDisplay = document.getElementById("current-score");
   let finalScore = document.getElementById("final-score");
   let highScores = [];
-  let highScoreList = document.getElementById('highScoreList')
+  let highScoreList = document.getElementById("highScoreList");
 
-  var currentQuestionIndex = 0;
-  var timeLeft = 60;
-  var timerId;
+  let currentQuestionIndex = 0;
+  let timeLeft = 60;
+  let timer;
   function displayQuestion(question) {
     quizContainer.innerHTML = question.q;
     choicesContainer.innerHTML = "";
@@ -111,6 +111,9 @@ document.addEventListener("DOMContentLoaded", function () {
           } else {
             console.log("wrong");
             score = score - 10;
+            timeLeft = timeLeft - 10;
+            timerContainer.textContent = timeLeft;
+
             scoreDisplay.innerText = "Current Score:" + score;
 
             console.log(score);
@@ -119,16 +122,24 @@ document.addEventListener("DOMContentLoaded", function () {
           displayQuestion(questions[currentQuestionIndex]);
         } else {
           //End game here
-          gameOverContainer.setAttribute("class", "game-over");
-          gameContainer.setAttribute("class", "hidden");
-          startButton.setAttribute("class", "");
-          finalScore.innerText = score + " Points!";
+          endGame();
+          timerContainer.textContent = 0;
+
+          clearInterval(timer);
         }
       });
       choicesContainer.appendChild(choice_btn);
     }
   }
+  function endGame() {
+    gameOverContainer.setAttribute("class", "game-over");
+    gameContainer.setAttribute("class", "hidden");
+    startButton.setAttribute("class", "");
+    finalScore.innerText = score + " Points!";
+  }
   function startGame() {
+    timeLeft = 60;
+    timerContainer.textContent = timeLeft;
     console.log("starting game");
     displayQuestion(questions[currentQuestionIndex]);
     answerContainer.innerHTML = "answer";
@@ -138,6 +149,15 @@ document.addEventListener("DOMContentLoaded", function () {
     gameOverContainer.setAttribute("class", "hidden");
     score = 0;
     scoreDisplay.innerText = "Current Score:" + score;
+    timer = setInterval(function () {
+      timeLeft--;
+      console.log(timeLeft);
+      timerContainer.textContent = timeLeft;
+      if (timeLeft === 0) {
+        clearInterval(timer);
+        endGame();
+      }
+    }, 1000);
   }
   console.log(questions);
   console.log(timerContainer);
@@ -147,11 +167,10 @@ document.addEventListener("DOMContentLoaded", function () {
   submitButton.addEventListener("click", function () {
     //initialsInput.value
     console.log(initialsInput.value + score);
-    highScores.push(initialsInput.value + ', ' + score)
-    initialsInput.value = '';
-    storeHighScores()
+    highScores.push(initialsInput.value + ", " + score);
+    initialsInput.value = "";
+    storeHighScores();
     gameOverContainer.setAttribute("class", "hidden");
-
   });
   function initStoage() {
     // Get stored todos from localStorage
@@ -161,16 +180,20 @@ document.addEventListener("DOMContentLoaded", function () {
     if (storedScores !== null) {
       highScores = storedScores;
     }
+    displayHighScores();
+  }
+  function displayHighScores() {
+    highScoreList.innerHTML = "";
     for (let index = 0; index < highScores.length; index++) {
       const highScore = highScores[index];
       const highScoreEl = document.createElement("p");
       highScoreEl.textContent = highScore;
-      highScoreList.appendChild(highScoreEl)
+      highScoreList.appendChild(highScoreEl);
     }
   }
-
   function storeHighScores() {
     // Stringify and set key in localStorage to todos array
     localStorage.setItem("scores", JSON.stringify(highScores));
+    displayHighScores();
   }
 });
