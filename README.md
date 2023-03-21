@@ -14,7 +14,7 @@ Upon visiting the site, you will be greeted with a little text prompt and see a 
 
 Check it out for yourself! [Code Quiz Link Here](https://philippwinston.github.io/Code-Quiz/).
 
-![alt text][def]
+![alt text](./assets/images/code-quiz-start.jpeg)
 ## Credits
 
 Please refrence w3chools for the model code, I wanted to use a model in this project and it was only touched on briefly in one lession [w3schools model link ](https://www.w3schools.com/howto/howto_css_modals.asp)
@@ -22,6 +22,3 @@ Please refrence w3chools for the model code, I wanted to use a model in this pro
 ## License
 
 N/A
-
-
-[def]: ./Assets/images/code-quiz-start.jpeg
