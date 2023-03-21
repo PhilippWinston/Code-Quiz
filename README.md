@@ -14,7 +14,7 @@ Upon visiting the site, you will be greeted with a little text prompt and see a 
 
 Check it out for yourself! [Code Quiz Link Here](https://philippwinston.github.io/Code-Quiz/).
 
-![Code Quiz start img](./Assets/images/code-quiz-start.png)
+![alt text](Assets/images/code-quiz-start.png)
 
 ## Credits
 
