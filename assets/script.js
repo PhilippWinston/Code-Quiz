@@ -165,7 +165,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   startButton.addEventListener("click", startGame);
   submitButton.addEventListener("click", function () {
-    //initialsInput.value
     console.log(initialsInput.value + score);
     highScores.push(initialsInput.value + ", " + score);
     initialsInput.value = "";
@@ -173,10 +172,8 @@ document.addEventListener("DOMContentLoaded", function () {
     gameOverContainer.setAttribute("class", "hidden");
   });
   function initStoage() {
-    // Get stored todos from localStorage
     var storedScores = JSON.parse(localStorage.getItem("scores"));
 
-    // If todos were retrieved from localStorage, update the todos array to it
     if (storedScores !== null) {
       highScores = storedScores;
     }
@@ -192,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   function storeHighScores() {
-    // Stringify and set key in localStorage to todos array
+    // Stringify and set key in localStorage to scores array
     localStorage.setItem("scores", JSON.stringify(highScores));
     displayHighScores();
   }
