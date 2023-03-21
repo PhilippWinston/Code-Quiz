@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="./assets/script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>    <title>Code Quiz!</title>
+
+    <title>Code Quiz!</title>
     <style>
       html {
         scroll-behavior: smooth;
@@ -17,8 +19,7 @@
   <body>
     <header class="header">
       <h1>
-        If you're coding fancy or fancy coding,
-        I'm sure you'll have a Blast!
+        If you're coding fancy or fancy coding, I'm sure you'll have a Blast!
       </h1>
 
       <nav>
@@ -30,7 +31,7 @@
           <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Current High Scores</h2>
-            <p></p>
+            <div id="highScoreList"></div>
           </div>
         </div>
 
@@ -41,23 +42,25 @@
     <main>
       <div id="Its-Game-Time" class="Its-Game-Time">
         <h2>Try your coding knowledge!</h2>
-        <div class="timer">Time: <span id="time">0</span>
-        
-        </div>
-        <button id="start">Start Quiz</button>
-      </div>
-      <div id="q" class="q"></div>
-      <div id="a" class="a"></div>
+      <div id="current-score">Current Score:0</div>
+        <div class="timer">Time: <span id="time">0</span></div>
+        <button id="start-btn">Start Quiz</button>
 
-      <div id="game-over" class="game-over">
-        <h2>Game over!</h2>
-        <p>Your final score is <span id="final-score"></span>.</p>
-        <p>
-          Enter initials: <input type="text" id="initials" max="3" />
-          <button id="submit">Submit</button>
-        </p>
+        <div id="game-container">
+          <div id="q" class="q"></div>
+          <div id="c" class="c"></div>
+          <div id="a" class="a"></div>
+        </div>
+        <div id="game-over" class="hidden">
+          <h2>Game over!</h2>
+          <p>Your final score is <span id="final-score"></span></p>
+          <p>
+            Enter initials: <input type="text" id="initials" max="3" />
+            <button id="submit">Submit</button>
+          </p>
+        </div>
       </div>
-     </main>
+    </main>
 
     <footer id="Contact-Me" class="footer">
       <nav>
